@@ -1,6 +1,6 @@
 
 <?php
-// Start Session --> it shoud be at first for session running
+// Start Session   --> it shoud be at first for session running
   session_start();
 // Config file
  include 'config.php'; 
