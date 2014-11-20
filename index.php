@@ -1,6 +1,19 @@
 
-<?php include 'config.php'; ?>
-<?php include 'classes/database.php'; ?>
+<?php
+// Start Session 
+session start();
+// Config file
+ include 'config.php'; 
+//Database class
+include 'classes/database.php'; 
+
+$database = new Database();
+
+//Set Timeout
+date_default_timezone_get('America/New_York');
+?>
+
+
 
 <?php
 // LOG IN
@@ -27,6 +40,9 @@
         $login_msg[] = 'Sorry. Login does not work';
       }
     }
+    
+
+    //Log out
     ?>
 <!DOCTYPE html>
 <html lang="en">
