@@ -1,7 +1,7 @@
 
 <?php
 // Start Session --> it shoud be at first for session running
-session start();
+  session_start();
 // Config file
  include 'config.php'; 
 //Database class
@@ -10,7 +10,7 @@ include 'classes/database.php';
 $database = new Database();
 
 //Set Timeout
-date_default_timezone_get('America/New_York');
+date_default_timezone_set('America/New_York');
 ?>
 
 
@@ -23,7 +23,7 @@ date_default_timezone_get('America/New_York');
       $enc_password = md5($password);
 
   //Query
-      $database->query("SELECT * FROM users WHERE username = :username AND passwoed =:password");
+      $database->query("SELECT * FROM users WHERE username = :username AND password =:password");
       $database->bind(':username',$username);
       $database->bind(':password',$enc_password);
       $row = $database->resultset();
@@ -41,13 +41,13 @@ date_default_timezone_get('America/New_York');
       }
     }
     
-
     //Log out
     if($_POST['logout_submit']){
       if(isset($_SESSION['username']))
           unset($_SESSION['username']);
-      if(isset($_SESSION['password'])
-          unset($_SESSION['password']);
+      if(isset($_SESSION['password']))
+        unset($_SESSION['password']);
+
       if(isset($_SESSION['logged_in']))
           unset($_SESSION['logged_in']);
       session_destroy();
