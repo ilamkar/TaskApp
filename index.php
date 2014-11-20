@@ -1,6 +1,6 @@
 
 <?php
-// Start Session 
+// Start Session --> it shoud be at first for session running
 session start();
 // Config file
  include 'config.php'; 
@@ -43,6 +43,15 @@ date_default_timezone_get('America/New_York');
     
 
     //Log out
+    if($_POST['logout_submit']){
+      if(isset($_SESSION['username']))
+          unset($_SESSION['username']);
+      if(isset($_SESSION['password'])
+          unset($_SESSION['password']);
+      if(isset($_SESSION['logged_in']))
+          unset($_SESSION['logged_in']);
+      session_destroy();
+    }
     ?>
 <!DOCTYPE html>
 <html lang="en">
