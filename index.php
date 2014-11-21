@@ -18,7 +18,7 @@ date_default_timezone_set('America/New_York');
 <?php
 // LOG IN
     if($_POST['login_submit']){
-      $username = $_POST['useraname'];
+      $username = $_POST['username'];
       $password = $_POST['password'];
       $enc_password = md5($password);
 
@@ -26,7 +26,7 @@ date_default_timezone_set('America/New_York');
       $database->query("SELECT * FROM users WHERE username = :username AND password =:password");
       $database->bind(':username',$username);
       $database->bind(':password',$enc_password);
-      $row = $database->resultset();
+      $rows = $database->resultset();
       $count = count($rows);
       if($count>0){
         session_start();
@@ -103,7 +103,7 @@ date_default_timezone_set('America/New_York');
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="http://localhost/taskapp">About</a></li>
             <li><a href="index.php?page=register">Register</a></li>
           </ul>
         </div><!--/.nav-collapse -->
