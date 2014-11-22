@@ -29,9 +29,10 @@ echo '<h3>Tasks</h3>';
 if($rows){
 	echo '<ul class = "items">';
 foreach($rows as $task){
-	echo '<li><a href = "page=task&id='.$task['id'].'">'.$task['task_name'].'</a></li>';
+	echo '<li><a href = "?page=task&id='.$task['id'].'">'.$task['task_name'].'</a></li>';
 }
 	echo '</ul>';
 }	else{
 	echo 'No task for this list - <a href="index.php?page=new_task&listid='.$_GET['id'].'">Create one now</a>';
 }
+?>
