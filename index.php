@@ -5,7 +5,7 @@
 // Config file
  include 'config.php'; 
 //Database class
-include 'classes/database.php'; 
+ require 'classes/database.php'; 
 
 $database = new Database();
 
@@ -104,7 +104,7 @@ date_default_timezone_set('America/New_York');
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="http://localhost/taskapp">About</a></li>
-            <li><a href="index.php?page=register">Register</a></li>
+            <li><a href="?page=register">Register</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
