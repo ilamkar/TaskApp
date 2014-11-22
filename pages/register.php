@@ -54,7 +54,7 @@
 	//Check to see if email has been used
 
 	//Query
-		$database->query('SELECT email FROM users WHERE email = :email');
+		$database->query('SELECT email FROM users WHERE email = :email'); // : 
 		$database->bind(':email',$email);
 
 	//Execute

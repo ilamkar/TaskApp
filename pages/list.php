@@ -1,3 +1,5 @@
+
+<h1> this is list page</h1>
 <?php 
 $list_id  =  $_GET['id'];
 
@@ -11,7 +13,7 @@ $row = $database->single();
 
 echo '<h1>'.$row['list_name'].'</h1>';
 echo '<p>'.$row['list_body'].'</p>';
-echo '<a href = "?page= edit_list&id ='.$row['id'].'">Edit List</a> |';
+echo '<a href = "?page=edit_list&id='.$row['id'].'">Edit List</a> | ';
 echo '<a href ="?page=delete_list&id='.$row['id'].'">Delete List</a>';
 
 //Instiance Database object
@@ -19,7 +21,7 @@ $database = new Database();
 
 //Query
 $database->query('SELECT * FROM tasks WHERE list_id =:list_id AND is_complete = :is_complete');
-$databse->bind(':list_id',$list_id);
+$database->bind(':list_id',$list_id);
 $database->bind(':is_complete',0);
 $rows = $database->resultset();
 
