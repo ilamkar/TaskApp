@@ -37,7 +37,7 @@
 		}
 
 	// Instantiate Database objects
-		$database = new Database;
+		$database = new Database();
 
 	//Check to see if username has been used
 
