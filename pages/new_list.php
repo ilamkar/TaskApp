@@ -6,7 +6,7 @@
 
 	$database = new Database();
 
-	$database->query('INSERT INTO list(list_name, list_body, list_user) VALUES(:list_name,:list_body,:list_user)');
+	$database->query('INSERT INTO list (list_name, list_body, list_user) VALUES(:list_name,:list_body,:list_user)');
 	$database->bind(':list_name',$list_name);
 	$database->bind(':list_body',$list_body);
 	$database->bind(':list_user',$list_user);
@@ -24,5 +24,5 @@
 	<input type = "text" name = "list_name" /><br/>
 	<label>List Body</label>
 	<textarea row = '5' cols="50" name = "list_body"></textarea> <br/>
-	<input type ="submit" value ='Create' name = "submit"/>
+	<input type ="submit" value ='Create' name="submit"/>
 </form>
