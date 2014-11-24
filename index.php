@@ -98,13 +98,20 @@ date_default_timezone_set('America/New_York');
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="#">TASK APP</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="http://localhost/taskapp">About</a></li>
-            <li><a href="?page=register">Register</a></li>
+            <li class = "active"><a href="http://localhost/taskapp">Home</a></li>
+            <?php 
+              if(!$_SESSION['logged_in']):?>
+                  <li><a href="index.php?page=register">Register</a></li>
+            <?php else: ?>
+            <li><a href  = "index.php?page=new_list">Add List</a></li>
+             <li><a href="index.php?page=new_task">Add Task</a></li>
+           
+            <?php endif; ?>
+
           </ul>
         </div><!--/.nav-collapse -->
       </div>
