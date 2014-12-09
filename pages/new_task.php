@@ -38,7 +38,7 @@
 	<input type="text" name="task_name" /><br/>
 	<?php if($_GET['listid']): ?>
 		<input type="hidden" name="list_id" value="<?php echo $_GET['listid'];?>"/>
-	<?php else:?>
+	<?php else : ?>
 	<label>List</label>
 	<select name="list_id">
 		<option value="0">--Select List--</option>
@@ -46,7 +46,7 @@
 			<option value="<?php echo $list['id'];?>"><?php echo $list['list_name'];?></option>
 		<?php endforeach; ?>
 	</select>
-		<?php endif;?>
+		<?php endif; ?>
 	<br/>
 	<label>Task Body</label><br/>
 	<textarea rows="5" cols="50" name="task_body"></textarea><br/>

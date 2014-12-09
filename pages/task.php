@@ -2,6 +2,7 @@
 <h1>Task Page</h1>
 <?php 
 	$task_id = $_GET['id'];
+	echo $task_id;
 
 // Instatiate Database object
 	$database = new Database();
