@@ -1,7 +1,7 @@
 
 <h1> this is list page</h1>
 <?php 
-$list_id  =  $_GET['id'];
+$list_id  = $_GET['id'];
 
 // Instianate Database object
 $database  = new Database();
