@@ -92,6 +92,7 @@ date_default_timezone_set('America/New_York');
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
+
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
@@ -99,7 +100,7 @@ date_default_timezone_set('America/New_York');
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="#">TASK APP</a>
-        </div>
+          </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class = "active"><a href="http://localhost/taskapp">Home</a></li>
@@ -109,17 +110,19 @@ date_default_timezone_set('America/New_York');
             <?php else: ?>
             <li><a href  = "index.php?page=new_list">Add List</a></li>
              <li><a href="index.php?page=new_task">Add Task</a></li>
-           
+            
             <?php endif; ?>
 
           </ul>
+           
         </div><!--/.nav-collapse -->
+
       </div>
     </nav>
 
     <div class="container">
 
-    <h1>Hello World</h1>
+    <h1>Hello <?php  echo $_SESSION['username'];?></h1>
 
     <?php
       if($_GET['page'] == 'welcome' || $_GET['page']==""){
