@@ -71,6 +71,10 @@ date_default_timezone_set('America/New_York');
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
 
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
@@ -148,6 +152,10 @@ date_default_timezone_set('America/New_York');
       ?>
 
     </div><!-- /.container -->
+
+
+<d
+
 
     <h3>Login Form</h3>
       <form action = "<?php $_SERVER['PHP_SELF']; ?>" method="post">
